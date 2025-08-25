@@ -207,3 +207,47 @@
                 setTimeout(() => { if (notification.parentNode) document.body.removeChild(notification); }, 400);
             }, 3000);
         }
+
+
+    // ==================== 
+    // ANIMACIÓN DE CARGA
+    // ==================== 
+    document.addEventListener('DOMContentLoaded', function () {
+        const body = document.body;
+        const sections = document.querySelectorAll('section');
+
+        // Mostrar cuerpo después de que el DOM cargue
+        setTimeout(() => {
+            body.classList.add('loaded');
+        }, 100);
+
+        // Detectar qué secciones están visibles al hacer scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observar cada sección
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+
+    // Formulario de contacto
+document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    if (!name) return showNotification('El nombre es obligatorio ❌', 'error');
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        return showNotification('Email inválido ❌', 'error');
+    }
+
+    showNotification('¡Mensaje enviado! Nos contactaremos pronto 💬', 'success');
+    this.reset();
+});
+
