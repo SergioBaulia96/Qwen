@@ -6,10 +6,49 @@
             let cart = [];
 
             const products = [
-                { id: 1, name: 'Drone X1', price: 299, image: 'img/Dron.jpg', desc: 'Drone de alta velocidad con IA integrada.' },
-                { id: 2, name: 'SmartWatch Neo', price: 199, image: 'img/smartwach.jpg', desc: 'Reloj inteligente con proyección holográfica.' },
-                { id: 3, name: 'Neural Headset', price: 499, image: 'img/Mente.jpg', desc: 'Controla tus dispositivos con tu mente.' }
-            ];
+    { 
+        id: 1, 
+        name: 'Drone X1', 
+        price: 299, 
+        image: 'img/Dron.jpg', 
+        desc: 'Drone de alta velocidad con inteligencia artificial para seguimiento automático, ideal para fotografía aérea y vigilancia.' 
+    },
+    { 
+        id: 2, 
+        name: 'SmartWatch Neo', 
+        price: 199, 
+        image: 'img/smartwach.jpg', 
+        desc: 'Reloj inteligente con proyección holográfica, monitoreo de salud avanzado y conectividad 5G.' 
+    },
+    { 
+        id: 3, 
+        name: 'Neural Headset', 
+        price: 499, 
+        image: 'img/Mente.jpg', 
+        desc: 'Interfaz cerebral de última generación que permite controlar dispositivos con el pensamiento y registrar patrones neurológicos.' 
+    },
+    { 
+        id: 4, 
+        name: 'Realidad Virtual Pro', 
+        price: 349, 
+        image: 'img/realidad-virtual.jpg', 
+        desc: 'Gafas de realidad virtual inmersiva con campo visual de 200°, seguimiento ocular y audio 3D espacial para experiencias hiperrealistas.' 
+    },
+    { 
+        id: 5, 
+        name: 'PC Gamer Quantum', 
+        price: 899, 
+        image: 'img/pc-gamer.jpg', 
+        desc: 'Potente computadora gamer con GPU RTX 4080, procesador i9 y refrigeración líquida, diseñada para juegos 8K y renderizado profesional.' 
+    },
+    { 
+        id: 6, 
+        name: 'Impresora 3D Nexus', 
+        price: 549, 
+        image: 'img/impresora.jpg', 
+        desc: 'Impresora 3D de alta precisión con impresión láser, compatible con múltiples materiales y diseño en tiempo real desde cualquier dispositivo.' 
+    }
+];
 
             function renderProducts() {
                 const container = $('#products-container');
