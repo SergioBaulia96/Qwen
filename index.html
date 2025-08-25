@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TechNova Store - Tecnología del futuro, hoy disponible." />
+    <title>TechNova Store | Tecnología del Futuro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <h1 class="logo"><a href="#home">TechNova</a></h1>
+        <button class="menu-toggle">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#home" class="nav-link"><span>Inicio</span></a></li>
+                <li><a href="#catalog" class="nav-link"><span>Catálogo</span></a></li>
+                <li><a href="#services" class="nav-link"><span>Servicios</span></a></li>
+                <li><a href="#about" class="nav-link"><span>Sobre Nosotros</span></a></li>
+                <li><a href="#payment" class="nav-link"><span>Pagos</span></a></li>
+            </ul>
+        </nav>
+        <button class="cart-icon" id="cart-button">🛒 <span id="cart-count">0</span></button>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <button class="mobile-menu-close">×</button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#catalog">Catálogo</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#payment">Pagos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a <span>TechNova</span></h2>
+            <p>Productos del futuro, hoy en tus manos.</p>
+            <a href="#catalog" class="btn">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="catalog" class="section">
+        <h2>🛒 Nuestro Catálogo</h2>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Buscar productos...">
+            <span id="search-clear" class="search-clear">×</span>
+        </div>
+        <div class="products" id="products-container"></div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="services" class="section">
+        <h2>🔧 Nuestros Servicios</h2>
+        <div class="services-grid">
+            <article class="service-card">
+                <h3>Mantenimiento Inteligente</h3>
+                <p>Soporte técnico remoto con IA para resolver problemas en segundos.</p>
+            </article>
+            <article class="service-card">
+                <h3>Personalización Avanzada</h3>
+                <p>Adapta cualquier producto a tus necesidades específicas y estilo de vida.</p>
+            </article>
+            <article class="service-card">
+                <h3>Entrega Express Cuántica</h3>
+                <p>Entrega garantizada en menos de 24 horas en más de 50 países.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="about" class="section">
+        <h2>👤 Sobre TechNova</h2>
+        <p>Somos una empresa líder en tecnología futurista. Nuestro objetivo es acercar lo que antes parecía ciencia ficción a la vida real. Fundada en 2025, ya tenemos más de 10.000 clientes satisfechos en todo el mundo.</p>
+        <p>Creemos en la innovación, la sostenibilidad y el diseño pensado en el ser humano.</p>
+    </section>
+
+    <!-- PAGOS -->
+    <section id="payment" class="section">
+        <h2>💳 Formas de Pago</h2>
+        <div class="payment-methods">
+            <p>✅ Tarjetas de crédito/débito (Visa, Mastercard)</p>
+            <p>✅ PayPal</p>
+            <p>✅ Criptomonedas (Bitcoin, Ethereum)</p>
+            <p>✅ Transferencia bancaria</p>
+            <p>✅ Pago en efectivo al recibir (solo en zonas urbanas)</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 TechNova. Todos los derechos reservados.</p>
+        <p>Contacto: <a href="mailto:hola@technova.com">hola@technova.com</a> | <a href="tel:+54912345678">+54 9 1234-5678</a></p>
+    </footer>
+
+    <!-- CARRITO -->
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+            <button class="cart-close">×</button>
+        </div>
+        <ul id="cart-items" class="cart-items-list"></ul>
+        <div class="cart-total">
+            <p>Total: <strong>$<span id="cart-total">0.00</span></strong></p>
+        </div>
+        <button id="checkout-btn" class="btn-checkout">Finalizar Compra</button>
+    </aside>
+
+    <!-- OVERLAY -->
+    <div id="overlay" class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
