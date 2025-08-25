@@ -774,3 +774,53 @@ footer {
     text-align: center;
     margin-top: 0; /* Quitamos margen porque la sección ya tiene altura */
 }
+
+/* ==================== 
+   SERVICIOS - CON IMÁGENES
+   ==================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 243, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 255, 157, 0.25);
+}
+
+.service-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.05);
+}
+
+.service-card h3 {
+    color: var(--accent);
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    color: #b0b0d0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
